@@ -21,7 +21,16 @@ Then install all dependencies
 ```sh
 pnpm install
 ```
+### 3. Run the backend code from repo https://github.com/sagun-k/skygem-insurance-backend.git in your local
 
+### 4. Update the url in package.json pnpm run generate:client to 
+```sh
+    "generate:client": "openapi --input http://localhost:<backend-running-port>/api-docs.json --output ./generated-api/src --client axios"
+```
+### 5. Build the project
+```sh
+pnpm run build
+```
 ### 3.Development
 ```sh
 pnpm run dev
